@@ -1,0 +1,17 @@
+{
+  "name": "senior-qa-expert",
+  "version": "1.0.0",
+  "description": "Senior QA Expert — a Claude Code skill: layered test design, independent review gate, evidence-based execution, 5-Why bug tracking, case↔bug status linkage, with pluggable per-domain checklists.",
+  "bin": {
+    "senior-qa-expert": "bin/install.js"
+  },
+  "files": [
+    "SKILL.md",
+    "references",
+    "bin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QA-Ray/Senior_QA_Expert.git"
+  }
+}

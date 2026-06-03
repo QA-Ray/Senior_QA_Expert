@@ -11,17 +11,28 @@
 - **越用越全**:每测一个新域,把坑沉淀进 `references/domains/<域>.md`。
 
 ## 安装
-把本仓库内容放到 Claude Code 的 skills 目录(目录名即技能名):
 
+**方式一:npx 一键装(推荐,需本机有 git + node)**
 ```bash
-# 全局(所有项目可用)
-git clone https://github.com/QA-Ray/Senior_QA_Expert ~/.claude/skills/Senior_QA_Expert
+# 装到全局 ~/.claude/skills/(所有项目可用)
+npx github:QA-Ray/Senior_QA_Expert
 
+# 装到当前项目 ./.claude/skills/
+npx github:QA-Ray/Senior_QA_Expert --project
+
+# 装到指定 skills 目录
+npx github:QA-Ray/Senior_QA_Expert --dir <你的 skills 目录>
+```
+
+**方式二:git clone**
+```bash
+# 全局
+git clone https://github.com/QA-Ray/Senior_QA_Expert ~/.claude/skills/Senior_QA_Expert
 # 或项目级
 git clone https://github.com/QA-Ray/Senior_QA_Expert <你的项目>/.claude/skills/Senior_QA_Expert
 ```
 
-装好后 `…/.claude/skills/Senior_QA_Expert/SKILL.md` 就位即可;重载 Claude Code 后可用。
+两种装完后 `…/.claude/skills/Senior_QA_Expert/SKILL.md` 就位;重载 Claude Code 后可用。
 
 ## 用法
 在对话里:
@@ -40,6 +51,7 @@ references/
   domains/
     README.md
     wallet.md                  # 示例域:加密钱包(充提 / 归集 / 资产 / 链特性)
+package.json / bin/install.js  # npx 安装器(把上面文件拷到 .claude/skills/)
 ```
 
 ## 加新域
